@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: AtmosphericScatteringBlitPass
   m_EditorClassIdentifier: 
   m_Active: 1
-  PassEvent: 400
+  PassEvent: 300
 --- !u!114 &5061922563835645060
 MonoBehaviour:
   m_ObjectHideFlags: 0

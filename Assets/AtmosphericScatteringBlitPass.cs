@@ -57,12 +57,12 @@ public class AtmosphericScatteringBlitPass : ScriptableRendererFeature
                 scattering.rt = new RenderTexture(cameraTextureDescriptor);
                 scattering.rt.useDynamicScale = true;
             }
-            scattering.OnPre();
             base.Configure(cmd, cameraTextureDescriptor);
         }
 
         public void Setup(RenderTargetIdentifier currentTarget, RenderTargetHandle destination)
         {
+            scattering.OnPre();
             source = currentTarget;
             this.destination = destination;
         }

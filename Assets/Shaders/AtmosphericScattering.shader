@@ -293,7 +293,7 @@ Shader "Hidden/AtmosphericScattering"
 				shadow = (pow(shadow, 4) + shadow) / 2;
 				shadow = max(0.1, shadow);
 
-				inscattering *= shadow;
+				inscattering *= shadow * 4;
 #endif
 				float4 background = tex2D(_Background, uv);
 
