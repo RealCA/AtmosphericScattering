@@ -1,5 +1,7 @@
 *.sln
 Library
+Logs
+Obj
 Temp
 *.suo
 *.csproj
