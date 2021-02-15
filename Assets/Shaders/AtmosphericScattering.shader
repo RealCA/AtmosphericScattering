@@ -307,7 +307,7 @@ Shader "Hidden/AtmosphericScattering"
 				}
 					
 				float4 c = background * extinction + inscattering;
-				return background -1;
+				return c;
 			}
 			ENDCG
 		}

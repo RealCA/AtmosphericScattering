@@ -87,7 +87,8 @@ Shader "Hidden/URPUnlitShaderBasic"
 
             // The fragment shader definition.            
             float4 fragDir(Varyings i) : SV_Target
-            {float2 uv = i.uv.xy;
+            {
+                float2 uv = i.uv.xy;
 				float depth = LoadSceneDepth(uv);
 				float linearDepth = Linear01Depth(depth,_ZBufferParams);
 

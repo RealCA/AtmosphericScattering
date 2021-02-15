@@ -346,7 +346,6 @@ public class AtmosphericScattering : MonoBehaviour
 
             // upscale to full res
             _lightShaftsCommandBuffer.Blit(new RenderTargetIdentifier(halfShaftsRT1), new RenderTargetIdentifier(lightShaftsRT1), _lightShaftMaterial, 5);
-            _lightShaftsCommandBuffer.Blit(new RenderTargetIdentifier(lightShaftsRT1), rt);
         }
     }
 
@@ -759,26 +758,9 @@ public class AtmosphericScattering : MonoBehaviour
     /// </summary>
     public Material GetMat(CommandBuffer cmd, RenderTargetIdentifier source)
     {
-        rt.Release();
         cmd.Blit(source, rt);
-        var material = new Material(Shader.Find("Hidden/URPUnlitShaderBasic"));
-        UpdateMaterialParameters(material);
-        material.SetFloat("_SunIntensity", SunIntensity);
-        material.SetTexture("_RandomVectors", _randomVectorsLUT);
-
-        material.SetTexture("_InscatteringLUT", _inscatteringLUT);
-        material.SetTexture("_ExtinctionLUT", _extinctionLUT);
-        if (RenderingMode == RenderMode.Reference)
-            material.EnableKeyword("ATMOSPHERE_REFERENCE");
-        else
-            material.DisableKeyword("ATMOSPHERE_REFERENCE");
-
-        if (RenderLightShafts)
-            material.EnableKeyword("LIGHT_SHAFTS");
-        else
-            material.DisableKeyword("LIGHT_SHAFTS");
-        material.SetTexture("_Background", rt);
-        return material;
+        _material.SetTexture("_Background", rt);
+        return _material;
     }
     
     /// <summary>

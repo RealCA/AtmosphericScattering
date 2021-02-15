@@ -87,7 +87,7 @@ public class AtmosphericScatteringBlitPass : ScriptableRendererFeature
                 }
                 else
                 {
-                    Blit(cmd, source, temporaryColorTexture.Identifier(), mat, 0);
+                    Blit(cmd, source, temporaryColorTexture.Identifier(), mat, 3);
                     Blit(cmd, temporaryColorTexture.Identifier(), source);
                 }
             }
@@ -99,7 +99,7 @@ public class AtmosphericScatteringBlitPass : ScriptableRendererFeature
                 }
                 else
                 {
-                    Blit(cmd, source, destination.Identifier(), mat, 0);
+                    Blit(cmd, source, destination.Identifier(), mat, 3);
                 }
             }
             // execution
