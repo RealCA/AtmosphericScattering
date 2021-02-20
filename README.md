@@ -1,4 +1,5 @@
-# Atmospheric Scattering for Unity 5
+# Atmospheric Scattering for Unity (URP)
+# all thanks to (SlightlyMad)
 [![IMAGE ALT TEXT HERE](https://0rvyea-dm2305.files.1drv.com/y4m8IYQKFvibqLRG_QUmIgqF8TsZgx9PnWa92JunBI9titjls-SYeD5rEgps7XoylMsjBc_xbYYJFwUDG2it4vtpK3THTFqBM3xZjgSuIR9WW28X6ZXlj1lu1CmcyfoncgLFD1PjrZ8SI7FDi8qODxiwi-3kyjPh5mcnrEz8t0rSSx1xNMvX2ddeLcypSp7W2gCdsUGC5BQB6blmuT4wJ1-Vg?width=1403&height=639&cropmode=none)](https://youtu.be/MC6MKYHllX0)
 
 Open source (BSD) atmospheric scattering for Unity 5. Features precomputed physically based atmospheric scattering (single scattering at the moment). It can render skybox, atmospheric fog, light shafts and global reflection probe (only skybox is reflected). It can also control directional and ambient light color/intensity. All parts can be turned on and off at any time.
@@ -17,7 +18,7 @@ TBD
 (I plan to continue working on it but no promises)
 
 ### Requirements
-* Unity 5 (tested on 5.3.4)
+* Unity 2018 and Above (tested on 2020.2.5f1)
 * Requires Compute shaders -> requires DirectX 11 or equivalent 
 * Tested on Windows/DX11 only but it should work on other platforms as well
 * Tested only with deferred rendering path
